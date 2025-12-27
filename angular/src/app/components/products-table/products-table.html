@@ -1,0 +1,32 @@
+<div class="max-w-2xl mx-auto">
+  <div class="overflow-x-auto">
+    <table class="w-full border-collapse">
+      <thead>
+        <tr class="bg-slate-700 text-slate-100">
+          <th class="border border-slate-600 px-4 py-3 text-left font-semibold">ID</th>
+          <th class="border border-slate-600 px-4 py-3 text-left font-semibold">Name</th>
+          <th class="border border-slate-600 px-4 py-3 text-left font-semibold">Description</th>
+          <th class="border border-slate-600 px-4 py-3 text-left font-semibold">Quantity</th>
+          <th class="border border-slate-600 px-4 py-3 text-left font-semibold">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products" class="hover:bg-slate-100 transition-colors">
+          <td class="border border-slate-300 px-4 py-3 text-slate-900">{{ product.id }}</td>
+          <td class="border border-slate-300 px-4 py-3 text-slate-900 font-medium">
+            {{ product.name }}
+          </td>
+          <td class="border border-slate-300 px-4 py-3 text-slate-700">
+            {{ product.description }}
+          </td>
+          <td class="border border-slate-300 px-4 py-3 text-slate-900 text-center">
+            {{ product.quantity }}
+          </td>
+          <td class="border border-slate-300 px-4 py-3 text-slate-900 font-medium">
+            ${{ product.price.toFixed(2) }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/angular/dist
+/angular/tmp
+/angular/out-tsc
+/angular/bazel-out
+
+# Node
+/angular/node_modules
+/angular/npm-debug.log
+/angular/yarn-error.log
+
+# IDEs and editors
+/angular/.idea/
+/angular/.project
+/angular/.classpath
+/angular/.c9/
+/angular/*.launch
+/angular/.settings/
+/angular/*.sublime-workspace
+
+# Visual Studio Code
+/angular/.vscode/*
+!/angular/.vscode/settings.json
+!/angular/.vscode/tasks.json
+!/angular/.vscode/launch.json
+!/angular/.vscode/extensions.json
+/angular/.history/*
+
+# Miscellaneous
+/angular/.angular/cache
+/angular/.sass-cache/
+/angular/connect.lock
+/angular/coverage
+/angular/libpeerconnection.log
+/angular/testem.log
+/angular/typings
+/angular/__screenshots__/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# SpringBoot
+# Compiled output
+/rest-service/target/
+/rest-service/build/
+/rest-service/out/
+/rest-service/bin/
+/rest-service/.gradle/
+
+# Spring Boot specific
+/rest-service/spring-boot-*.log
+/rest-service/application-*.log
+
+# IDE and editors
+/rest-service/.idea/
+/rest-service/.project
+/rest-service/.classpath
+/rest-service/.c9/
+/rest-service/*.launch
+/rest-service/.settings/
+/rest-service/*.sublime-workspace
+/rest-service/.factorypath
+/rest-service/.apt_generated
+/rest-service/.apt_generated_tests
+
+# Visual Studio Code
+/rest-service/.vscode/*
+!/rest-service/.vscode/settings.json
+!/rest-service/.vscode/tasks.json
+!/rest-service/.vscode/launch.json
+!/rest-service/.vscode/extensions.json
+/rest-service/.history/*
+
+# IntelliJ IDEA
+/rest-service/*.iml
+/rest-service/*.ipr
+/rest-service/*.iws
+
+# Eclipse
+/rest-service/.metadata
+/rest-service/.recommenders
+
+# Maven
+/rest-service/.mvn/
+/rest-service/mvnw
+/rest-service/mvnw.cmd
+
+# Gradle
+/rest-service/gradle/
+/rest-service/gradlew
+/rest-service/gradlew.bat
+
+# Package Files
+/rest-service/*.jar
+/rest-service/*.war
+/rest-service/*.nar
+/rest-service/*.ear
+/rest-service/*.zip
+/rest-service/*.tar.gz
+/rest-service/*.rar
+
+# Logs
+/rest-service/logs/
+/rest-service/*.log
+
+# Temporary files
+/rest-service/temp/
+/rest-service/tmp/
+
+# SQLite
+/rest-service/mydb.sqlite
+/rest-service/rest-service/mydb.sqlite
+
+# System files
+.DS_Store
+Thumbs.db

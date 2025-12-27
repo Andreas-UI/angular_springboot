@@ -1,0 +1,35 @@
+<div class="app-wrapper">
+  <app-nav></app-nav>
+  <div class="app-container">
+    <app-sidebar></app-sidebar>
+    <main class="main-content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<style>
+  :host {
+    display: block;
+    height: 100vh;
+  }
+
+  .app-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .app-container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .main-content {
+    flex: 1;
+    margin-left: 250px;
+    overflow-y: auto;
+    background-color: #ffffff;
+  }
+</style>

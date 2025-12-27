@@ -1,0 +1,75 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="max-w-2xl mx-auto">
+  <div class="space-y-6">
+    <div>
+      <label for="name" class="block text-sm font-medium text-slate-900 mb-2">Product Name</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Enter product name"
+        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      />
+      <div *ngIf="name && name.invalid && name.touched" class="text-red-500 text-sm mt-1">
+        <p *ngIf="name.errors?.['required']">Name is required</p>
+        <p *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</p>
+      </div>
+    </div>
+
+    <div>
+      <label for="description" class="block text-sm font-medium text-slate-900 mb-2"
+        >Description</label
+      >
+      <textarea
+        id="description"
+        formControlName="description"
+        placeholder="Enter product description"
+        rows="4"
+        class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+      ></textarea>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div>
+        <label for="quantity" class="block text-sm font-medium text-slate-900 mb-2">Quantity</label>
+        <input
+          id="quantity"
+          type="number"
+          formControlName="quantity"
+          placeholder="Enter quantity"
+          class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        <div
+          *ngIf="quantity && quantity.invalid && quantity.touched"
+          class="text-red-500 text-sm mt-1"
+        >
+          <p *ngIf="quantity.errors?.['required']">Quantity is required</p>
+          <p *ngIf="quantity.errors?.['min']">Quantity must be a positive number</p>
+        </div>
+      </div>
+
+      <div>
+        <label for="price" class="block text-sm font-medium text-slate-900 mb-2">Price</label>
+        <input
+          id="price"
+          type="number"
+          step="0.01"
+          formControlName="price"
+          placeholder="Enter price"
+          class="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        />
+        <div *ngIf="price && price.invalid && price.touched" class="text-red-500 text-sm mt-1">
+          <p *ngIf="price.errors?.['required']">Price is required</p>
+          <p *ngIf="price.errors?.['min']">Price must be a positive number</p>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="!form.valid || submitLoading"
+      class="w-full bg-blue-500 hover:bg-blue-600 disabled:bg-slate-400 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+    >
+      {{ submitLoading ? 'Creating...' : 'Create Product' }}
+    </button>
+  </div>
+</form>
